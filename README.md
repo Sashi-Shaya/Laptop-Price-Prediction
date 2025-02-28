@@ -42,7 +42,7 @@ Performance metrics such as accuracy were used to determine the best model.
 ## Deployment
 The trained model is deployed using **Flask** to allow users to input laptop specifications and receive price predictions instantly.
 
-https://github.com/user-attachments/assets/15691678-04a2-4b33-87f3-9687b4eda9f0 
+https://github.com/user-attachments/assets/0a51eb79-9c5c-4cdf-a73e-a918935682eb
 
 For currency conversion, the model uses an exchange rate of **1 EUR = 309.35 LKR** as of **2025-02-28**.
 
@@ -53,6 +53,9 @@ For currency conversion, the model uses an exchange rate of **1 EUR = 309.35 LKR
 
 ## Author
 Sashini Shayamindi - AI Researcher & Machine Learning Enthusiast
+
+
+
 
 
 
