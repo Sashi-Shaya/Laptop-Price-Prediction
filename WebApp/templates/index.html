@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/static/style.css">
+    <title>Laptop Price Predictor</title>
+</head>
+<body>
+    <div class="wrapper">
+        <div class="title">Laptop Price Predictor</div>
+        <form action="/" method="POST">
+            <div class="form">
+                <div class="inputfield">
+                    <label for="ram">Ram (GB)</label>
+                    <input class="input" type="text" name="ram" required>
+                </div>
+                <div class="inputfield">
+                    <label for="weight">Weight (Kg)</label>
+                    <input class="input" type="text" name="weight" required>
+                </div>
+                <div class="inputfield">
+                    <label for="company">Company</label>
+                    <div class = "custom_select">
+                        <select name="company" id="company">
+                            <option value="" selected hidden>Select</option>
+                            <option value="acer">Acer</option>
+                            <option value="apple">Apple</option>
+                            <option value="asus">Asus</option>
+                            <option value="dell">Dell</option>
+                            <option value="hp">HP</option>
+                            <option value="lenovo">Lenovo</option>
+                            <option value="msi">MSI</option>
+                            <option value="toshiba">Toshiba</option>
+                            <option value="other">Other</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="inputfield">
+                    <label for="typename">Type Name</label>
+                    <div class = "custom_select">
+                        <select name="typename" id="typename">
+                            <option value="" selected hidden>Select</option>
+                            <option value="2in1convertible">2 in 1 Convertible</option>
+                            <option value="gaming">Gaming</option>
+                            <option value="netbook">Net Book</option>
+                            <option value="notebook">Note Book</option>
+                            <option value="ultrabook">Ultra Book</option>
+                            <option value="workstation">Workstation</option>
+                        </select> 
+                    </div>
+                </div>
+                <div class="inputfield">
+                    <label for="opsys">Operating System</label>           
+                    <div class = "custom_select">
+                        <select name="opsys" id="opsys">
+                            <option value="" selected hidden>Select</option>
+                            <option value="windows">Windows</option>
+                            <option value="mac">Mac</option>
+                            <option value="linux">Linux</option>
+                            <option value="other">Other</option>
+                        </select> 
+                    </div>
+                </div>
+                <div class="inputfield">
+                    <label for="cpuname">CPU</label>   
+                    <div class = "custom_select">
+                        <select name="cpuname" id="cpuname">
+                            <option value="" selected hidden>Select</option>
+                            <option value="amd_a10_9600p">AMD A10-Series 9600P 2.4GHz</option>
+                            <option value="amd_a10_9620p">AMD A10-Series 9620P 2.5GHz</option>
+                            <option value="amd_a10_9620p_2">AMD A10-Series A10-9620P 2.5GHz</option>
+                            <option value="amd_a12_9700p">AMD A12-Series 9700P 2.5GHz</option>
+                            <option value="amd_a12_9720p">AMD A12-Series 9720P 2.7GHz</option>
+                            <option value="amd_a12_9720p_2">AMD A12-Series 9720P 3.6GHz</option>
+                            <option value="amd_a4_7210">AMD A4-Series 7210 2.2GHz</option>
+                            <option value="amd_a6_7310">AMD A6-Series 7310 2GHz</option>
+                            <option value="amd_a6_9220">AMD A6-Series 9220 2.5GHz</option>
+                            <option value="amd_a6_9220_2">AMD A6-Series 9220 2.9GHz</option>
+                            <option value="amd_a6_9220_3">AMD A6-Series A6-9220 2.5GHz</option>
+                            <option value="amd_a8_7410">AMD A8-Series 7410 2.2GHz</option>
+                            <option value="amd_a9_9410">AMD A9-Series 9410 2.9GHz</option>
+                            <option value="amd_a9_9420">AMD A9-Series 9420 2.9GHz</option>
+                            <option value="amd_a9_9420_2">AMD A9-Series 9420 3GHz</option>
+                            <option value="amd_a9_9420_3">AMD A9-Series A9-9420 3GHz</option>
+                            <option value="amd_e_6110">AMD E-Series 6110 1.5GHz</option>
+                            <option value="amd_e_7110">AMD E-Series 7110 1.8GHz</option>
+                            <option value="amd_e_9000">AMD E-Series 9000 2.2GHz</option>
+                            <option value="amd_e_9000e">AMD E-Series 9000e 1.5GHz</option>
+                            <option value="amd_e2_6110">AMD E-Series E2-6110 1.5GHz</option>
+                            <option value="amd_e2_9000">AMD E-Series E2-9000 2.2GHz</option>
+                            <option value="amd_e2_9000e">AMD E-Series E2-9000e 1.5GHz</option>
+                            <option value="amd_fx_8800p">AMD FX 8800P 2.1GHz</option>
+                            <option value="amd_fx_9830p">AMD FX 9830P 3GHz</option>
+                            <option value="amd_ryzen_1600">AMD Ryzen 1600 3.2GHz</option>
+                            <option value="amd_ryzen_1700">AMD Ryzen 1700 3GHz</option>
+                            <option value="intel_atom_x5_z8350">Intel Atom X5-Z8350 1.44GHz</option>
+                            <option value="intel_atom_z8350">Intel Atom Z8350 1.92GHz</option>
+                            <option value="intel_atom_x5_z8300">Intel Atom x5-Z8300 1.44GHz</option>
+                            <option value="intel_atom_x5_z8350_2">Intel Atom x5-Z8350 1.44GHz</option>
+                            <option value="intel_celeron_3205u">Intel Celeron Dual Core 3205U 1.5GHz</option>
+                            <option value="intel_celeron_3855u">Intel Celeron Dual Core 3855U 1.6GHz</option>
+                            <option value="intel_celeron_n3050">Intel Celeron Dual Core N3050 1.6GHz</option>
+                            <option value="intel_celeron_n3060">Intel Celeron Dual Core N3060 1.60GHz</option>
+                            <option value="intel_celeron_n3060_2">Intel Celeron Dual Core N3060 1.6GHz</option>
+                            <option value="intel_celeron_n3350">Intel Celeron Dual Core N3350 1.1GHz</option>
+                            <option value="intel_celeron_n3350_2">Intel Celeron Dual Core N3350 2.0GHz</option>
+                            <option value="intel_celeron_n3350_3">Intel Celeron Dual Core N3350 2GHz</option>
+                            <option value="intel_atom_x5_z8550">Intel Atom x5-Z8550 1.44GHz</option>
+                            <option value="intel_celeron_n3160">Intel Celeron Quad Core N3160 1.6GHz</option>
+                            <option value="intel_celeron_n3450">Intel Celeron Quad Core N3450 1.1GHz</option>
+                            <option value="intel_celeron_n3710">Intel Celeron Quad Core N3710 1.6GHz</option>
+                            <option value="intel_core_m_1_1">Intel Core M 1.1GHz</option>
+                            <option value="intel_core_m_1_2">Intel Core M 1.2GHz</option>
+                            <option value="intel_core_m_6y30">Intel Core M 6Y30 0.9GHz</option>
+                            <option value="intel_core_m_6y54">Intel Core M 6Y54 1.1GHz</option>
+                            <option value="intel_core_m_6y75">Intel Core M 6Y75 1.2GHz</option>
+                            <option value="intel_core_m_7y30">Intel Core M 7Y30 1.0GHz</option>
+                            <option value="intel_core_m_m3_6y30">Intel Core M M3-6Y30 0.9GHz</option>
+                            <option value="intel_core_m_m7_6y75">Intel Core M M7-6Y75 1.2GHz</option>
+                            <option value="intel_core_m_m3_1_2">Intel Core M m3 1.2GHz</option>
+                            <option value="intel_core_m_m3_7y30">Intel Core M m3-7Y30 2.2GHz</option>
+                            <option value="intel_core_m_m7_6y75">Intel Core M m7-6Y75 1.2GHz</option>
+                            <option value="intel_core_i3_6006u_2_0">Intel Core i3 6006U 2.0GHz</option>
+                            <option value="intel_core_i3_6006u_2_2">Intel Core i3 6006U 2.2GHz</option>
+                            <option value="intel_core_i3_6006u_2">Intel Core i3 6006U 2GHz</option>
+                            <option value="intel_core_i3_6100u_2_1">Intel Core i3 6100U 2.1GHz</option>
+                            <option value="intel_core_i3_6100u_2_3">Intel Core i3 6100U 2.3GHz</option>
+                            <option value="intel_core_i3_7100u_2_4">Intel Core i3 7100U 2.4GHz</option>
+                            <option value="intel_core_i3_7130u_2_7">Intel Core i3 7130U 2.7GHz</option>
+                            <option value="intel_core_i5_1_3">Intel Core i5 1.3GHz</option>
+                            <option value="intel_core_i5_1_6">Intel Core i5 1.6GHz</option>
+                            <option value="intel_core_i5_1_8">Intel Core i5 1.8GHz</option>
+                            <option value="intel_core_i5_2_0">Intel Core i5 2.0GHz</option>
+                            <option value="intel_core_i5_2_3">Intel Core i5 2.3GHz</option>
+                            <option value="intel_core_i5_2_9">Intel Core i5 2.9GHz</option>
+                            <option value="intel_core_i5_3_1">Intel Core i5 3.1GHz</option>
+                            <option value="intel_core_i5_6200u_2_3">Intel Core i5 6200U 2.3GHz</option>
+                            <option value="intel_core_i5_6260u_1_8">Intel Core i5 6260U 1.8GHz</option>
+                            <option value="intel_core_i5_6300hq_2_3">Intel Core i5 6300HQ 2.3GHz</option>
+                            <option value="intel_core_i5_6300u_2_4">Intel Core i5 6300U 2.4GHz</option>
+                            <option value="intel_core_i5_6440hq_2_6">Intel Core i5 6440HQ 2.6GHz</option>
+                            <option value="intel_core_i5_7200u_2_50">Intel Core i5 7200U 2.50GHz</option>
+                            <option value="intel_core_i5_7200u_2_5">Intel Core i5 7200U 2.5GHz</option>
+                            <option value="intel_core_i5_7200u_2_70">Intel Core i5 7200U 2.70GHz</option>
+                            <option value="intel_core_i5_7200u_2_7">Intel Core i5 7200U 2.7GHz</option>
+                            <option value="intel_core_i5_7300hq_2_5">Intel Core i5 7300HQ 2.5GHz</option>
+                            <option value="intel_core_i5_7300u_2_6">Intel Core i5 7300U 2.6GHz</option>
+                            <option value="intel_core_i5_7440hq_2_8">Intel Core i5 7440HQ 2.8GHz</option>
+                            <option value="intel_core_i5_7500u_2_7">Intel Core i5 7500U 2.7GHz</option>
+                            <option value="intel_core_i5_7y54_1_2">Intel Core i5 7Y54 1.2GHz</option>
+                            <option value="intel_core_i5_7y57_1_2">Intel Core i5 7Y57 1.2GHz</option>
+                            <option value="intel_core_i5_8250u_1_6">Intel Core i5 8250U 1.6GHz</option>
+                            <option value="intel_core_i7_2_2">Intel Core i7 2.2GHz</option>
+                            <option value="intel_core_i7_2_7">Intel Core i7 2.7GHz</option>
+                            <option value="intel_core_i7_2_8">Intel Core i7 2.8GHz</option>
+                            <option value="intel_core_i7_2_9">Intel Core i7 2.9GHz</option>
+                            <option value="intel_core_i7_6500u_2_50">Intel Core i7 6500U 2.50GHz</option>
+                            <option value="intel_core_i7_6500u_2_5">Intel Core i7 6500U 2.5GHz</option>
+                            <option value="intel_core_i7_6560u_2_2">Intel Core i7 6560U 2.2GHz</option>
+                            <option value="intel_core_i7_6600u_2_6">Intel Core i7 6600U 2.6GHz</option>
+                            <option value="intel_core_i7_6700hq_2_6">Intel Core i7 6700HQ 2.6GHz</option>
+                            <option value="intel_core_i7_6820hk_2_7">Intel Core i7 6820HK 2.7GHz</option>
+                            <option value="intel_core_i7_6820hq_2_7">Intel Core i7 6820HQ 2.7GHz</option>
+                            <option value="intel_core_i7_6920hq_2_9">Intel Core i7 6920HQ 2.9GHz</option>
+                            <option value="intel_core_i7_7500u_2_5">Intel Core i7 7500U 2.5GHz</option>
+                            <option value="intel_core_i7_7500u_2_7">Intel Core i7 7500U 2.7GHz</option>
+                            <option value="intel_core_i7_7560u_2_4">Intel Core i7 7560U 2.4GHz</option>
+                            <option value="intel_core_i7_7600u_2_8">Intel Core i7 7600U 2.8GHz</option>
+                            <option value="intel_core_i7_7660u_2_5">Intel Core i7 7660U 2.5GHz</option>
+                            <option value="intel_pentium_dual_core_4405u_2_1">Intel Pentium Dual Core 4405U 2.1GHz</option>
+                            <option value="intel_core_i7_7700hq_2_7">Intel Core i7 7700HQ 2.7GHz</option>
+                            <option value="intel_core_i7_7700hq_2_8">Intel Core i7 7700HQ 2.8GHz</option>
+                            <option value="intel_core_i7_7820hk_2_9">Intel Core i7 7820HK 2.9GHz</option>
+                            <option value="intel_core_i7_7820hq_2_9">Intel Core i7 7820HQ 2.9GHz</option>
+                            <option value="intel_core_i7_7y75_1_3">Intel Core i7 7Y75 1.3GHz</option>
+                            <option value="intel_core_i7_8550u_1_8">Intel Core i7 8550U 1.8GHz</option>
+                            <option value="intel_core_i7_8650u_1_9">Intel Core i7 8650U 1.9GHz</option>
+                            <option value="intel_pentium_dual_core_4405y_1_5">Intel Pentium Dual Core 4405Y 1.5GHz</option>
+                            <option value="intel_pentium_dual_core_n4200_1_1">Intel Pentium Dual Core N4200 1.1GHz</option>
+                            <option value="intel_pentium_quad_core_n3700_1_6">Intel Pentium Quad Core N3700 1.6GHz</option>
+                            <option value="intel_pentium_quad_core_n3710_1_6">Intel Pentium Quad Core N3710 1.6GHz</option>
+                            <option value="intel_pentium_quad_core_n4200_1_1">Intel Pentium Quad Core N4200 1.1GHz</option>
+                            <option value="intel_xeon_e3_1505m_v6_3">Intel Xeon E3-1505M V6 3GHz</option>
+                            <option value="intel_xeon_e3_1535m_v5_2_9">Intel Xeon E3-1535M v5 2.9GHz</option>
+                            <option value="intel_xeon_e3_1535m_v6_3_1">Intel Xeon E3-1535M v6 3.1GHz</option>
+                            <option value="samsung_cortex_a72_a53_2_0">Samsung Cortex A72&A53 2.0GHz</option>
+
+                        </select>  
+                    </div>
+                </div>
+                <div class="inputfield">
+                    <label for="gpuname">GPU</label>
+                    <div class = "custom_select">
+                        <select name="gpuname" id="gpuname">
+                            <option value="" selected hidden>Select</option>
+                            <option value="amd_firepro_w4190m">AMD FirePro W4190M</option>
+                            <option value="amd_firepro_w4190m_2">AMD FirePro W4190M</option>
+                            <option value="amd_firepro_w5130m">AMD FirePro W5130M</option>
+                            <option value="amd_firepro_w6150m">AMD FirePro W6150M</option>
+                            <option value="amd_r17m_m1_70">AMD R17M-M1-70</option>
+                            <option value="amd_r4_graphics">AMD R4 Graphics</option>
+                            <option value="amd_radeon_520">AMD Radeon 520</option>
+                            <option value="amd_radeon_530">AMD Radeon 530</option>
+                            <option value="amd_radeon_540">AMD Radeon 540</option>
+                            <option value="amd_radeon_pro_455">AMD Radeon Pro 455</option>
+                            <option value="amd_radeon_pro_555">AMD Radeon Pro 555</option>
+                            <option value="amd_radeon_pro_560">AMD Radeon Pro 560</option>
+                            <option value="amd_radeon_r2">AMD Radeon R2</option>
+                            <option value="amd_radeon_r2_graphics">AMD Radeon R2 Graphics</option>
+                            <option value="amd_radeon_r5_m330">AMD Radeon R5 M330</option>
+                            <option value="amd_radeon_r3">AMD Radeon R3</option>
+                            <option value="amd_radeon_r4">AMD Radeon R4</option>
+                            <option value="amd_radeon_r4_graphics">AMD Radeon R4 Graphics</option>
+                            <option value="amd_radeon_r5">AMD Radeon R5</option>
+                            <option value="amd_radeon_r5_430">AMD Radeon R5 430</option>
+                            <option value="amd_radeon_r5_520">AMD Radeon R5 520</option>
+                            <option value="amd_radeon_r5_m315">AMD Radeon R5 M315</option>
+                            <option value="amd_radeon_r5_m420">AMD Radeon R5 M420</option>
+                            <option value="amd_radeon_r5_m420x">AMD Radeon R5 M420X</option>
+                            <option value="amd_radeon_r5_m430">AMD Radeon R5 M430</option>
+                            <option value="amd_radeon_r7">AMD Radeon R7</option>
+                            <option value="amd_radeon_r7_graphics">AMD Radeon R7 Graphics</option>
+                            <option value="amd_radeon_r7_m360">AMD Radeon R7 M360</option>
+                            <option value="amd_radeon_r7_m365x">AMD Radeon R7 M365X</option>
+                            <option value="amd_radeon_r7_m440">AMD Radeon R7 M440</option>
+                            <option value="amd_radeon_r7_m445">AMD Radeon R7 M445</option>
+                            <option value="amd_radeon_r7_m460">AMD Radeon R7 M460</option>
+                            <option value="amd_radeon_r7_m465">AMD Radeon R7 M465</option>
+                            <option value="amd_radeon_r9_m385">AMD Radeon R9 M385</option>
+                            <option value="amd_radeon_rx_540">AMD Radeon RX 540</option>
+                            <option value="amd_radeon_rx_550">AMD Radeon RX 550</option>
+                            <option value="amd_radeon_rx_560">AMD Radeon RX 560</option>
+                            <option value="amd_radeon_rx_580">AMD Radeon RX 580</option>
+                            <option value="arm_mali_t860_mp4">ARM Mali T860 MP4</option>
+                            <option value="intel_graphics_620">Intel Graphics 620</option>
+                            <option value="intel_hd_graphics">Intel HD Graphics</option>
+                            <option value="intel_hd_graphics_400">Intel HD Graphics 400</option>
+                            <option value="intel_hd_graphics_405">Intel HD Graphics 405</option>
+                            <option value="intel_hd_graphics_500">Intel HD Graphics 500</option>
+                            <option value="intel_hd_graphics_505">Intel HD Graphics 505</option>
+                            <option value="intel_hd_graphics_510">Intel HD Graphics 510</option>
+                            <option value="intel_hd_graphics_515">Intel HD Graphics 515</option>
+                            <option value="intel_hd_graphics_520">Intel HD Graphics 520</option>
+                            <option value="intel_hd_graphics_530">Intel HD Graphics 530</option>
+                            <option value="intel_hd_graphics_5300">Intel HD Graphics 5300</option>
+                            <option value="intel_hd_graphics_540">Intel HD Graphics 540</option>
+                            <option value="intel_hd_graphics_6000">Intel HD Graphics 6000</option>
+                            <option value="intel_hd_graphics_615">Intel HD Graphics 615</option>
+                            <option value="intel_hd_graphics_620">Intel HD Graphics 620</option>
+                            <option value="intel_hd_graphics_630">Intel HD Graphics 630</option>
+                            <option value="intel_iris_graphics_540">Intel Iris Graphics 540</option>
+                            <option value="intel_iris_graphics_550">Intel Iris Graphics 550</option>
+                            <option value="intel_iris_plus_graphics_640">Intel Iris Plus Graphics 640</option>
+                            <option value="intel_iris_plus_graphics_650">Intel Iris Plus Graphics 650</option>
+                            <option value="intel_iris_pro_graphics">Intel Iris Pro Graphics</option>
+                            <option value="intel_uhd_graphics_620">Intel UHD Graphics 620</option>
+                            <option value="nvidia_gtx_980_sli">Nvidia GTX 980 SLI</option>
+                            <option value="nvidia_geforce_150mx">Nvidia GeForce 150MX</option>
+                            <option value="nvidia_geforce_920">Nvidia GeForce 920</option>
+                            <option value="nvidia_geforce_920m">Nvidia GeForce 920M</option>
+                            <option value="nvidia_geforce_920mx">Nvidia GeForce 920MX</option>
+                            <option value="nvidia_geforce_930m">Nvidia GeForce 930M</option>
+                            <option value="nvidia_geforce_930mx">Nvidia GeForce 930MX</option>
+                            <option value="nvidia_geforce_940m">Nvidia GeForce 940M</option>
+                            <option value="nvidia_geforce_940mx">Nvidia GeForce 940MX</option>
+                            <option value="nvidia_geforce_960m">Nvidia GeForce 960M</option>
+                            <option value="nvidia_geforce_gt_940mx">Nvidia GeForce GT 940MX</option>
+                            <option value="nvidia_geforce_gtx_1050">Nvidia GeForce GTX 1050</option>
+                            <option value="nvidia_geforce_gtx_1050_ti">Nvidia GeForce GTX 1050 Ti</option>
+                            <option value="nvidia_geforce_gtx_1050m">Nvidia GeForce GTX 1050M</option>
+                            <option value="nvidia_geforce_gtx_1050ti">Nvidia GeForce GTX 1050Ti</option>
+                            <option value="nvidia_geforce_gtx_1060">Nvidia GeForce GTX 1060</option>
+                            <option value="nvidia_geforce_gtx_1070">Nvidia GeForce GTX 1070</option>
+                            <option value="nvidia_geforce_gtx_1070m">Nvidia GeForce GTX 1070M</option>
+                            <option value="nvidia_geforce_gtx_1080">Nvidia GeForce GTX 1080</option>
+                            <option value="nvidia_geforce_gtx_930mx">Nvidia GeForce GTX 930MX</option>
+                            <option value="nvidia_quadro_m1000m">Nvidia Quadro M1000M</option>
+                            <option value="nvidia_geforce_gtx_940m">Nvidia GeForce GTX 940M</option>
+                            <option value="nvidia_geforce_gtx_940mx">Nvidia GeForce GTX 940MX</option>
+                            <option value="nvidia_geforce_gtx_950m">Nvidia GeForce GTX 950M</option>
+                            <option value="nvidia_geforce_gtx_960">Nvidia GeForce GTX 960</option>
+                            <option value="nvidia_geforce_gtx_960m">Nvidia GeForce GTX 960M</option>
+                            <option value="nvidia_geforce_gtx_965m">Nvidia GeForce GTX 965M</option>
+                            <option value="nvidia_geforce_gtx_970m">Nvidia GeForce GTX 970M</option>
+                            <option value="nvidia_geforce_gtx_980">Nvidia GeForce GTX 980</option>
+                            <option value="nvidia_geforce_gtx_980m">Nvidia GeForce GTX 980M</option>
+                            <option value="nvidia_geforce_gtx_1050_ti">Nvidia GeForce GTX 1050 Ti</option>
+                            <option value="nvidia_geforce_gtx_1060">Nvidia GeForce GTX 1060</option>
+                            <option value="nvidia_geforce_gtx_1080">Nvidia GeForce GTX 1080</option>
+                            <option value="nvidia_geforce_mx130">Nvidia GeForce MX130</option>
+                            <option value="nvidia_geforce_mx150">Nvidia GeForce MX150</option>
+                            <option value="nvidia_quadro_3000m">Nvidia Quadro 3000M</option>
+                            <option value="nvidia_quadro_m1200">Nvidia Quadro M1200</option>
+                            <option value="nvidia_quadro_m2000m">Nvidia Quadro M2000M</option>
+                            <option value="nvidia_quadro_m2200">Nvidia Quadro M2200</option>
+                            <option value="nvidia_quadro_m2200m">Nvidia Quadro M2200M</option>
+                            <option value="nvidia_quadro_m3000m">Nvidia Quadro M3000M</option>
+                            <option value="nvidia_quadro_m500m">Nvidia Quadro M500M</option>
+                            <option value="nvidia_quadro_m520m">Nvidia Quadro M520M</option>
+                            <option value="nvidia_quadro_m620">Nvidia Quadro M620</option>
+                            <option value="nvidia_quadro_m620m">Nvidia Quadro M620M</option>
+                            <option value="nvidia_geforce_gtx_965m">NVIDIA GeForce GTX 965M</option>
+                            <option value="nvidia_geforce_gtx_970m">NVIDIA GeForce GTX 970M</option>
+                            <option value="nvidia_geforce_gtx_980">NVIDIA GeForce GTX 980</option>
+                            <option value="nvidia_geforce_gtx_980m">NVIDIA GeForce GTX 980M</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="check">   
+                    <div>
+                        <label for="touchscreen">Touch Screen</label>
+                        <input type="checkbox" name="touchscreen">
+                    </div>
+                    <div>
+                        <label for="ips">IPS</label>
+                        <input type="checkbox" name="ips">
+                    </div>
+                </div>
+    
+                <div class="inputfield">
+                    <input class="btn" type="submit" value="Get the Price">
+                </div>
+            </div>
+        </form>
+
+        <div class="result">
+            {% if pred_value != 0 %}
+            <p>Estimated Price : LKR {{pred_value}}</p>
+            {% endif %}
+        </div>
+    </div>
+</body>
+</html>
